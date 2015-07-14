@@ -14,18 +14,12 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hello
+package uk.gov.hmrc.attachments.client.api
 
-import org.scalatest.Matchers._
-import org.scalatest.WordSpecLike
+import play.api.libs.json.Json
 
+case class UploadFileResponse(md5: String)
 
-class HelloWorldSpecs extends WordSpecLike {
-
-  "HelloWorld" should {
-
-    "say hello" in {
-      HelloWorld.sayHello shouldBe "hello"
-    }
-  }
+object UploadFileResponse {
+  implicit val format = Json.format[UploadFileResponse]
 }

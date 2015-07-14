@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-package uk.gov.hmrc.hello
+package uk.gov.hmrc.attachments.client.api
 
-object HelloWorld {
+import play.api.libs.json.Json
 
-  def main(args: Array[String]) {
-    println(sayHello)
-  }
+case class NewFileRequest(filename: String, properties: Map[String, String])
 
-  def sayHello:String = "hello"
+object NewFileRequest {
+  implicit val format = Json.format[NewFileRequest]
 }
