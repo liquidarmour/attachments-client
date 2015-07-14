@@ -17,7 +17,6 @@
 package uk.gov.hmrc.attachments.client
 
 import play.api.libs.iteratee.Enumerator
-import play.api.libs.json._
 import uk.gov.hmrc.attachments.client.api.{UploadFileResponse, NewFileRequest, NewFileResponse}
 import uk.gov.hmrc.domain.CtUtr
 import uk.gov.hmrc.play.audit.http.HeaderCarrier
